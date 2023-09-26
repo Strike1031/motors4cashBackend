@@ -1,0 +1,127 @@
+{
+    "BillingAccount": {
+        "AccountType": "Trial",
+        "AccountBalance": 999.99,
+        "TransactionCost": 999.99,
+        "ExtraInformation": {}
+    },
+    "TechnicalSupport": {
+        "ServerId": "UK1",
+        "RequestId": "49269da3c6984aa7bf864f75d6caa2fb",
+        "QueryDurationMs": 47,
+        "SupportDate": "23/09/2023",
+        "SupportTime": "18:15:47",
+        "SupportCode": "49269da3",
+        "SupportInformationList": []
+    },
+    "Request": {
+        "RequestGuid": "49269da3-c698-4aa7-bf86-4f75d6caa2fb",
+        "PackageId": "58bfbd2e-226e-4c39-a89e-3da9e16a4123",
+        "PackageVersion": 1,
+        "ResponseVersion": 2,
+        "DataKeys": {
+            "Vrm": "RA13PRA"
+        }
+    },
+    "Response": {
+        "StatusCode": "Success",
+        "StatusMessage": "Success",
+        "StatusInformation": {
+            "Lookup": {
+                "StatusCode": "Success",
+                "StatusMessage": "Success",
+                "AdviceTextList": []
+            }
+        },
+        "DataItems": {
+            "WriteOffRecordCount": 1,
+            "LookupStatusMessage": null,
+            "MileageRecordCount": 3,
+            "Vrm": "RA13PRA",
+            "ImportUsedBeforeUkRegistration": null,
+            "VicTestDate": null,
+            "DateFirstRegistered": "25/06/2018",
+            "StolenInfoSource": null,
+            "Model": "MODEL S 75D",
+            "PreviousColour": null,
+            "StolenStatus": null,
+            "PreviousKeeperCount": 1,
+            "WriteOffDate": "21/01/2023",
+            "ImportDate": null,
+            "StolenPoliceForce": null,
+            "FuelType": "ELECTRIC",
+            "LookupStatusCode": null,
+            "CertificateOfDestructionIssued": null,
+            "LatestColourChangeDate": null,
+            "Data": null,
+            "WriteOffCategory": "Category S",
+            "ColourChangeCount": 0,
+            "HighRiskRecordCount": 0,
+            "ImportedFromOutsideEu": false,
+            "Make": "TESLA",
+            "LatestV5cIssuedDate": "20/12/2021",
+            "MileageRecordList": [
+                {
+                    "DateOfInformation": "19/11/2022",
+                    "SourceOfInformation": "MOT",
+                    "Mileage": 39912
+                },
+                {
+                    "DateOfInformation": "26/11/2021",
+                    "SourceOfInformation": "MOT",
+                    "Mileage": 25057
+                },
+                {
+                    "DateOfInformation": "17/06/2021",
+                    "SourceOfInformation": "MOT",
+                    "Mileage": 22788
+                }
+            ],
+            "MileageAnomalyDetected": false,
+            "VinLast5": "57795",
+            "VicTestResult": null,
+            "DateFirstRegisteredUk": "25/06/2018",
+            "WriteOffRecordList": [
+                {
+                    "MiaftrEntryDate": "06/04/2023",
+                    "LossDate": "21/01/2023",
+                    "LossType": "CAT S STRUCTURAL DAMAGE",
+                    "Category": "S"
+                }
+            ],
+            "StolenDate": null,
+            "LatestKeeperChangeDate": "30/11/2021",
+            "StolenContactNumber": null,
+            "FinanceRecordCount": 0,
+            "PlateChangeCount": 2,
+            "ScrapDate": null,
+            "ExportDate": null,
+            "FinanceRecordList": [],
+            "StolenMiaftrRecordCount": 0,
+            "GearCount": 1,
+            "PlateChangeList": [
+                {
+                    "PreviousVrm": "BV18MDU",
+                    "DateChanged": "20/12/2021"
+                },
+                {
+                    "PreviousVrm": "S6ORR",
+                    "DateChanged": "18/08/2021"
+                }
+            ],
+            "Exported": false,
+            "HighRiskRecordList": null,
+            "TransmissionType": "Automatic",
+            "Scrapped": false,
+            "WrittenOff": true,
+            "YearOfManufacture": "2018",
+            "EngineCapacity": 0,
+            "Stolen": false,
+            "PreviousKeepers": null,
+            "Imported": false,
+            "StolenMiaftrRecordList": null,
+            "VicTested": null,
+            "Colour": "RED"
+        }
+    }
+}
