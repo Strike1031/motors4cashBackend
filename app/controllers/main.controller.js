@@ -162,6 +162,7 @@ exports.setVehicleStatusData = async (req, res) => {
             zone,
             component,
             fault,
+            name,
             email,
             postcode,
             phone,
@@ -205,6 +206,7 @@ exports.setVehicleStatusData = async (req, res) => {
                 { id: existingCar.id }
             );
             const newAppointment = {
+                name: name,
                 email: email,
                 postcode: postcode,
                 phone: phone,
@@ -243,6 +245,7 @@ exports.setVehicleStatusData = async (req, res) => {
             };
             const data = await Car.create(newCar);
             const newAppointment = {
+                name: name,
                 email: email,
                 postcode: postcode,
                 phone: phone,
@@ -251,7 +254,7 @@ exports.setVehicleStatusData = async (req, res) => {
                 appointment_date: appointment_date,
                 appointment_time: appointment_time,
             };
-            await Appointment.create(newAppointment);
+            await Appointment.create(newAppointment); 
             res.status(200).json({ status: true, message: "Reservation successful! We will call you with best valuation.", data: data });
         }
     } catch (error) {
