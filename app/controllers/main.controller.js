@@ -6,7 +6,7 @@ require('dotenv').config();
 
 // Get VehicleData
 exports.getVehicleData = async (req, res) => {
-    try {
+        try {
         const { reg, mileage } = req.query;
         let carDetails = {
             reg: reg,
@@ -20,7 +20,7 @@ exports.getVehicleData = async (req, res) => {
             VehicleImages: null,
         };
         // Get details from the database
-        const customDetails = await Car.findOne({ where: { vehicle_number: reg } });
+        const customDetails = await Car.findOne({ vehicle_number: reg });
         /**
          *   Get car details via API
          */
@@ -174,7 +174,7 @@ exports.setVehicleStatusData = async (req, res) => {
         //     return res.status(400).json({ status: false, message: "Invalid request parameters" });
         // }
         // Check if the vehicle already exists
-        const existingCar = await Car.findOne({ where: { vehicle_number: vehicle_number } });
+        const existingCar = await Car.findOne({ vehicle_number: vehicle_number });
         if (existingCar) {
             const newCar = {
                 vehicle_number: vehicle_number,
@@ -201,14 +201,14 @@ exports.setVehicleStatusData = async (req, res) => {
                 component: component,
                 fault: fault
             };
-            await Car.update(newCar, {
-                where: { id: existingCar.id }
-            });
+            await Car.updateOne(newCar, 
+                { id: existingCar.id }
+            );
             const newAppointment = {
                 email: email,
                 postcode: postcode,
                 phone: phone,
-                car_id: existingCar.id,
+                car_id: existingCar.vehicle_number,
                 appointment_place: appointment_place,
                 appointment_date: appointment_date,
                 appointment_time: appointment_time,
@@ -246,7 +246,7 @@ exports.setVehicleStatusData = async (req, res) => {
                 email: email,
                 postcode: postcode,
                 phone: phone,
-                car_id: data.id,
+                car_id: data.vehicle_number,
                 appointment_place: appointment_place,
                 appointment_date: appointment_date,
                 appointment_time: appointment_time,
@@ -266,20 +266,10 @@ exports.getAppointmentData = async (req, res) => {
         const { reg } = req.query;
 
         if(!reg) {
-            res.status(400).json({ status: false, message: "You can't get Appointment data without Reg", error: error.message });
+            res.status(400).json({ status: false, message: "You can't get Appointment data without Reg"});
         }
         
-        const SelectCar = await Car.findOne({ where: { vehicle_number: reg } });
-        const data = await Appointment.findAll({
-            include: {
-                model: Car,
-                where: {
-                  id: SelectCar.id,
-                },
-                required: false, // Left outer join
-              },
-        });
-        
+        const data = await Appointment.find({ car_id: reg });
         res.status(200).json({ status: true, message: "Appointment Data List", data:data});
     } catch (error) {
         console.log("Server error : ", error);

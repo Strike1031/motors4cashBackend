@@ -1,27 +1,28 @@
-module.exports = (sequelize, Sequelize) => {
-    const Appointment = sequelize.define("appointments", {
-      email: {
-        type: Sequelize.STRING
-      },
-      postcode: {
-        type: Sequelize.STRING
-      },
-      phone: {
-        type: Sequelize.INTEGER
-      },
-      car_id: {
-        type: Sequelize.INTEGER
-      },
-      appointment_place: {
-        type: Sequelize.STRING
-      },
-      appointment_date: {
-        type: Sequelize.STRING   
-      },
-      appointment_time: {
-        type: Sequelize.STRING
-      }
-    });
-  
-    return Appointment;
-  };
+const { model, Schema } = require('mongoose');
+const appointmentSchema = new Schema({
+    email: {
+      type: String
+    },
+    postcode: {
+      type: String
+    },
+    phone: {
+      type: String
+    },
+    car_id: {
+      type: String
+    },
+    appointment_place: {
+      type: String
+    },
+    appointment_date: {
+      type: String
+    },
+    appointment_time: {
+      type: String
+    }
+  }, {
+    timestamps: ['createdAt', 'updatedAt']
+});
+const appointments = model("Appointments", appointmentSchema);
+module.exports = appointments;

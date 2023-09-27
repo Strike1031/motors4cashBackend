@@ -1,14 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+require('dotenv').config();
 const app = express();
-
 const db = require("./app/models");
-db.sequelize.sync();
+const mongoose = require("mongoose");
 
 // var corsOptions = {
-//   origin: ["http://192.168.3.19:3000"]
+//   origin: ["http://1ocalhost:3000"]
 // };
 
 app.use(cors());
@@ -27,7 +26,13 @@ app.get("/", (req, res) => {
 require("./app/routes/main.routes")(app);
 
 // /////////////////////////////////////////////
-
+mongoose.connect(process.env.DATABASE_LINK)
+  .then(function (result) {
+    console.log("MongoDB Database Accessed");
+  })
+  .catch(function (err) {
+    console.log("MongoDB Database Access Failed");
+  })
 // set port, listen for requests
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
