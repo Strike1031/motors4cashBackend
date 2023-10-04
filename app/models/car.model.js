@@ -43,9 +43,6 @@ const CarSchema = new Schema({
   non_runner: {
     type: String,
   },
-  mot_month: {
-    type: String,
-  },
   insurance: {
     type: String,
   },
@@ -59,6 +56,9 @@ const CarSchema = new Schema({
     type: String,
   },
   seats: {
+    type: String,
+  },
+  damaged: {
     type: String,
   },
   zone: {

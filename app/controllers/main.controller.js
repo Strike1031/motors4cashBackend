@@ -153,12 +153,12 @@ exports.setVehicleStatusData = async (req, res) => {
             import_status,
             v_key,
             non_runner,
-            mot_month,
             insurance,
             private_hire,
             driving_tuition,
             police,
             seats,
+            damaged,
             zone,
             component,
             fault,
@@ -192,12 +192,12 @@ exports.setVehicleStatusData = async (req, res) => {
                 import_status: import_status,
                 v_key: v_key,
                 non_runner: non_runner,
-                mot_month: mot_month,
                 insurance: insurance,
                 private_hire: private_hire,
                 driving_tuition: driving_tuition,
                 police: police,
                 seats: seats,
+                damaged: damaged,
                 zone: zone,
                 component: component,
                 fault: fault
@@ -233,12 +233,12 @@ exports.setVehicleStatusData = async (req, res) => {
                 import_status: import_status,
                 v_key: v_key,
                 non_runner: non_runner,
-                mot_month: mot_month,
                 insurance: insurance,
                 private_hire: private_hire,
                 driving_tuition: driving_tuition,
                 police: police,
                 seats: seats,
+                damaged: damaged,
                 zone: zone,
                 component: component,
                 fault: fault
@@ -297,7 +297,7 @@ exports.loginAdmin = async(req, res) => {
 exports.getAdminData = async(req, res) => {
     try {
         const {name, password} = req.body;
-        let data =  await Car.findAll();
+        let data =  await Appointment.findAll();
         if (name == process.env.ADMIN_NAME && password == process.env.ADMIN_PASSWORD) {
             res.status(200).json({status: true, message: "Access Succeed", data: data});
         }
