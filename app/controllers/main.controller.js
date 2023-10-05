@@ -13,7 +13,7 @@ exports.getVehicleData = async (req, res) => {
             price: 0,
             makeModel: "",
             yearOfManufacture: "",     
-            mileage: mileage,
+            mileage: "",
             colour: "",
             bodyStyle: "",
             fuelType: "",
@@ -80,6 +80,7 @@ exports.getVehicleData = async (req, res) => {
             carDetails.yearOfManufacture = vehicleJsonData.data.Response.DataItems.VehicleRegistration.YearOfManufacture;
             carDetails.bodyStyle = vehicleJsonData.data.Response.DataItems.SmmtDetails.BodyStyle;
             carDetails.fuelType = vehicleJsonData.data.Response.DataItems.VehicleRegistration.FuelType;
+            carDetails.mileage = mileage;
     
         }
         else {
