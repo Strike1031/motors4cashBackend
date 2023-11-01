@@ -1,5 +1,8 @@
 const { model, Schema } = require('mongoose');
 const appointmentSchema = new Schema({
+    name: {
+      type: String
+    },
     email: {
       type: String
     },
@@ -19,6 +22,9 @@ const appointmentSchema = new Schema({
       type: String
     },
     appointment_time: {
+      type: String
+    },
+    ref_number: {
       type: String
     }
   }, {

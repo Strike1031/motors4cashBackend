@@ -4,6 +4,9 @@ const CarSchema = new Schema({
     type: String,
     required: true
   },
+  ref_number: {
+    type: String
+  },
   vehicle_name: {
     type: String,
   },
