@@ -71,7 +71,7 @@ const CarSchema = new Schema({
     type: String,
   },
   DamageTypes: {
-    type: String,
+    type: Array,
   },
   WindScreen: {
     type: String,
