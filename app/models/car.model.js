@@ -64,13 +64,124 @@ const CarSchema = new Schema({
   damaged: {
     type: String,
   },
-  zone: {
+  BodyWork: {
     type: String,
   },
-  component: {
+  PanelDamageCount: {
     type: String,
   },
-  fault: {
+  DamageTypes: {
+    type: String,
+  },
+  WindScreen: {
+    type: String,
+  },
+  CrackedDriverSide: {
+    type: String,
+  },
+  CrackedPassengerSide: {
+    type: String,
+  },
+  CrackedRearWindow: {
+    type: String,
+  },
+  Large5pCoin: {
+    type: String,
+  },
+  DashWarningLight: {
+    type: String,
+  },
+  DashMaxMiles: {
+    type: String,
+  },
+  ServiceDue: {
+    type: String,
+  },
+  OilWarning: {
+    type: String,
+  },
+  EngineManagement: {
+    type: String,
+  },
+  AirbagWarning: {
+    type: String,
+  },
+  ABS: {
+    type: String,
+  },
+  Wheels: {
+    type: String,
+  },
+  AlloyScuffed: {
+    type: String,
+  },
+  TyreTradeLimit: {
+    type: String,
+  },
+  Mirrors: {
+    type: String,
+  },
+  MirrorFaulty: {
+    type: String,
+  },
+  MirrorGlass: {
+    type: String,
+  },
+  MirrorCover: {
+    type: String,
+  },
+  Interior: {
+    type: String,
+  },
+  HasStains: {
+    type: String,
+  },
+  HasTears: {
+    type: String,
+  },
+  HasBurns: {
+    type: String,
+  },
+  WrapPrivatePlate: {
+    type: String,
+  },
+  WrapTwoKeys: {
+    type: String,
+  },
+  WrapOverMOT: {
+    type: String,
+  },
+  WrapLogbook: {
+    type: String,
+  },
+  WrapSC: {
+    type: String,
+  },
+  WrapMissingPart: {
+    type: String,
+  },
+  WrapFaultyElectrics: {
+    type: String,
+  },
+  WrapMechanicalIssues: {
+    type: String,
+  },
+  WrapNoModification: {
+    type: String,
+  },
+  WrapNoMileageAlteration: {
+    type: String,
+  },
+  WrapIsNotImported: {
+    type: String,
+  },
+  WrapRightHandDrive: {
+    type: String,
+  },
+  WrapExDriveSchool: {
+    type: String,
+  },
+  WrapTaxi: {
     type: String,
   },
 }, {
